@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+// function MyButton(){
+//   return (
+//     <button>
+//       Submit Button
+//     </button>
+//   );
+// }
 
-function App() {
+// const user ={
+//   name:"Sikandar Chauhan",
+//   imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
+//   imageSize: 90,
+// };
+
+// export default function MyApp(){
+//   return (
+//     <div>
+//     <h1>WelCome To My First React App</h1>
+//     <h2>{user.name}</h2>
+//     <img className="avatar"
+//     src={user.imageUrl}
+//     alt={"Photo of "+ user.name}
+//     style={{
+//       width:user.imageSize,
+//       height: user.imageSize
+//     }
+//     }
+//      />
+
+//     <MyButton />
+//     </div>
+//   );
+// }
+import { useState } from "react"
+
+ function MyButton(){
+  const [count , setCount] = useState(0);
+  function handleClick(){
+    // alert(setCount(count +1))
+    setCount(count +1) 
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <button onClick={handleClick}>
+      Click Me {count} times
+    </button>
+  )
 }
 
-export default App;
+export default function MyApp(){
+  return(
+    <div>
+      <h1>Counters that update sepeately</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  )
+}
+
+
