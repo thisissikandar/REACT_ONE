@@ -1,59 +1,15 @@
-// function MyButton(){
-//   return (
-//     <button>
-//       Submit Button
-//     </button>
-//   );
-// }
 
-// const user ={
-//   name:"Sikandar Chauhan",
-//   imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-//   imageSize: 90,
-// };
+import React from 'react';
+import Navbar from './Components/Navbar'
+import Textform from './Components/Textform'
 
-// export default function MyApp(){
-//   return (
-//     <div>
-//     <h1>WelCome To My First React App</h1>
-//     <h2>{user.name}</h2>
-//     <img className="avatar"
-//     src={user.imageUrl}
-//     alt={"Photo of "+ user.name}
-//     style={{
-//       width:user.imageSize,
-//       height: user.imageSize
-//     }
-//     }
-//      />
 
-//     <MyButton />
-//     </div>
-//   );
-// }
-import { useState } from "react"
+export default function App() {
+    return (
+        <div>
+            <Navbar />
+            <Textform/>
+        </div>
+    )
 
- function MyButton(){
-  const [count , setCount] = useState(0);
-  function handleClick(){
-    // alert(setCount(count +1))
-    setCount(count +1) 
-  }
-  return (
-    <button onClick={handleClick}>
-      Click Me {count} times
-    </button>
-  )
 }
-
-export default function MyApp(){
-  return(
-    <div>
-      <h1>Counters that update sepeately</h1>
-      <MyButton />
-      <MyButton />
-    </div>
-  )
-}
-
-
