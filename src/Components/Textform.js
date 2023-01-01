@@ -12,6 +12,11 @@ const Textform = () => {
     let newText = Text.toLowerCase()
     setText(newText)
   }
+  const handleClearClick = () => {
+    // console.log('UpperCase Was Clicked' +Text);
+    let newText = '';
+    setText(newText)
+  }
 
   const onChange = (e) => {
     // console.log('OnChange was Clicked')
@@ -29,6 +34,7 @@ const Textform = () => {
         </div>
         <button type="button" onClick={handleUpClick} className="btn btn-primary m-2">Conver To UpperCase</button>
         <button type="button" onClick={handleLowClick} className="btn btn-primary m-2">Conver To LowerCase</button>
+        <button type="button" onClick={handleClearClick} className="btn btn-primary m-2">Clear Text</button>
       </div>
 
       <div className="container">
