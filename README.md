@@ -1,1 +1,1 @@
-[Live Link text Here](textformattinapp.netlify.app)
+[Live Link text Here]([textformattinapp.netlify.app](https://textformattinapp.netlify.app/))
